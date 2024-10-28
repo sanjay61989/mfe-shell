@@ -1,0 +1,33 @@
+.top-bar {
+  background-color: grey; /* Dark background */
+  color: #fff; /* White text */
+  padding: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+.top-bar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.top-bar li {
+  float: left;
+}
+
+.top-bar li a {
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: #fff; /* White text */
+}
+
+.top-bar li a:hover {
+  background-color: #111; /* Darker background on hover */
+}
+
+.top-bar .router-link-active {
+  background-color: #007bff; /* Blue background for active link */
+}
