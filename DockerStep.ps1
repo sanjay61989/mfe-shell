@@ -14,5 +14,5 @@ if ($containerId) {
 }
 
 # Start a new container from the image
-docker rm -f $containerName
-docker run -d -p 8080:80 --name $containerName "${imageName}:${imageTag}"
+# docker rm -f ${containerName}
+docker run -d -p 8080:80 --name ${containerName} "${imageName}:${imageTag}"
