@@ -3,10 +3,6 @@ FROM node:20-alpine AS build
 # Nginx setup
 FROM nginx:alpine
 
-USER root
-RUN chmod 666 /var/run/docker.sock
-
-
 RUN ls -l
 RUN echo "Current Directory:"
 RUN pwd
