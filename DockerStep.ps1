@@ -4,7 +4,7 @@ $imageTag = "latest"
 $containerName = "my-web-app-container"
 
 # Build the Docker image
-docker build --progress=plain -t "${imageName}:${imageTag}" .
+docker build --no-cache --progress=plain -t "${imageName}:${imageTag}" .
 
 # Stop and remove the container if it's running
 $containerId = docker ps -q --filter "name=$containerName"
@@ -14,4 +14,5 @@ if ($containerId) {
 }
 
 # Start a new container from the image
+docker rm -f $containerName
 docker run -d -p 8080:80 --name $containerName "${imageName}:${imageTag}"

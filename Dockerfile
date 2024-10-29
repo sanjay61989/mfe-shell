@@ -37,4 +37,15 @@ RUN npm run build
 RUN mkdir -p /app/combined-dist/mfe-shell/meal-planner
 RUN cp -r /app/meal-planner/dist/meal-planner/browser/* /app/combined-dist/mfe-shell/meal-planner
 
+# Nginx setup
+FROM nginx:alpine
+RUN ls -l
+RUN echo "Current Directory:"
+RUN pwd
+
+COPY --from=build /app/combined-dist/mfe-shell/ /usr/share/nginx/html
+COPY nginx/nginx.conf /etc/nginx/nginx.conf
+# Start Nginx
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
 
