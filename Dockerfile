@@ -7,7 +7,7 @@ RUN ls -l
 RUN echo "Current Directory:"
 RUN pwd
 
-COPY --from=build /app/combined-dist/mfe-shell/ /usr/share/nginx/html
+COPY --from=build /tmp/build/ /usr/share/nginx/html
 COPY nginx/nginx.conf /etc/nginx/nginx.conf
 # Start Nginx
 EXPOSE 80
