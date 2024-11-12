@@ -7,11 +7,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
+    redirectTo: 'home',
     pathMatch: 'full',
   },
-
-  // Add this route:
   {
     path: 'gym',
     loadChildren: () =>
@@ -21,6 +19,10 @@ const routes: Routes = [
     path: 'mealplanner',
     loadChildren: () =>
       loadRemoteModule('meal-planner', './Module').then((m) => m.MealsModule),
+  },
+  {
+    path: 'home',
+    component: HomeComponent,
   },
   {
     path: '**',
