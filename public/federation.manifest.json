@@ -1,4 +1,5 @@
 {
   "gym-tracker": "http://localhost:4201/remoteEntry.json",
-  "meal-planner": "http://mfe-demo.com:8090/meal-planner/remoteEntry.json"
+  "meal-planner": "http://localhost:4202/remoteEntry.json",
+  "exercise-tracker": "http://localhost:4203/remoteEntry.json"
 }

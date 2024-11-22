@@ -21,9 +21,17 @@ const routes: Routes = [
       loadRemoteModule('meal-planner', './Module').then((m) => m.MealsModule),
   },
   {
+    path: 'exercise',
+    loadChildren: () =>
+      loadRemoteModule('exercise-tracker', './Module').then(
+        (m) => m.ExerciseModule
+      ),
+  },
+  {
     path: 'home',
     component: HomeComponent,
   },
+
   {
     path: '**',
     component: NotFoundComponent,
