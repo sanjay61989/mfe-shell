@@ -1,0 +1,9 @@
+<div class="scoreboard">
+  <h2>Live Cricket Scores</h2>
+  <ul>
+    <li *ngFor="let score of scores">
+      <p>{{ score.score }}</p>
+      <p>{{ score.match }}</p>
+    </li>
+  </ul>
+</div>
